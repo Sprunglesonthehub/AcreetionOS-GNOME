@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="AcreetionOS"
-iso_label="acreetionOS_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
+iso_name="AcreetionOS_GNOME"
+iso_label="acreetionOS_gnome_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="Acreetion OS"
-iso_application="Acreetion OS Install Media"
+iso_application="Acreetion OS [GNOME Edition] Install Media"
 iso_version="1.0"
 install_dir="arch"
 buildmodes=('iso')
@@ -37,3 +37,4 @@ file_permissions=(
   ["/usr/local/bin/preinstall"]="0:0:755"
   ["/usr/local/bin/stormos-final"]="0:0:755"
 )
+

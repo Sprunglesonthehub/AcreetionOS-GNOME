@@ -1,4 +1,6 @@
-# AcreetionOS Linux
+# AcreetionOS Linux GNOME
+
+This project is for those who want an installable experience for AcreetionOS with the GNOME Desktop Environment!x
 
 Welcome to AcreetionOS Linux, an open-source project aimed at providing the user a stable and up-to-date experience.
 
