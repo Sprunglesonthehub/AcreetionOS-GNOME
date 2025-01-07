@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="AcreetionOS_GNOME"
+iso_name="AcreetionOS GNOME"
 iso_label="acreetionOS_gnome_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="Acreetion OS"
-iso_application="Acreetion OS [GNOME Edition] Install Media"
+iso_application="Acreetion OS GNOME Install Media"
 iso_version="1.0"
 install_dir="arch"
 buildmodes=('iso')
@@ -26,15 +26,8 @@ file_permissions=(
   ["/usr/local/bin/Installation_guide"]="0:0:755"
   ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/usr/bin/calamares"]="0:0:755"
-#  ["/usr/lib/calamares/modules/*"]="0:0:755"
-  ["/root/cinstall"]="0:0:755"
-  ["/root/cinstall2"]="0:0:755"
-  ["/root/zone"]="0:0:755"
   ["/usr/bin/fixkeys.sh"]="0:0:755"
-  ["/usr/bin/dd.sh"]="0:0:755"
-  ["/usr/local/bin/postinstall.sh"]="0:0:755"
   ["/usr/bin/calamares.sh"]="0:0:755"
-  ["/usr/local/bin/preinstall"]="0:0:755"
   ["/usr/local/bin/stormos-final"]="0:0:755"
+  ["/usr/local/bin/preinstall"]="0:0:755"
 )
-
