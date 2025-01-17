@@ -1,5 +1,6 @@
 alsa-utils
 amd-ucode
+ananicy-cpp
 arch-install-scripts
 archinstall
 b43-fwcutter
@@ -26,6 +27,7 @@ dmraid
 dnsmasq
 dosfstools
 e2fsprogs
+earlyoom
 edk2-shell
 efibootmgr
 espeakup
@@ -123,8 +125,10 @@ terminus-font
 testdisk
 timeshift
 tmux
+touchegg
 tpm2-tools
 tpm2-tss
+tuned
 udftools
 unzip
 usb_modeswitch
@@ -148,3 +152,6 @@ yaml-cpp
 yay-bin
 zen-browser-bin
 zsh
+
+# VMWARE
+open-vm-tools
