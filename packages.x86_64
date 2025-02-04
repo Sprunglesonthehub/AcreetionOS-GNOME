@@ -8,12 +8,12 @@ base
 bcachefs-tools
 bind
 bolt
-brave-bin
 brltty
 broadcom-wl
 btrfs-progs
 calamares
 calamares-config-gnome
+chromium
 clonezilla
 cloud-init
 cryptsetup
