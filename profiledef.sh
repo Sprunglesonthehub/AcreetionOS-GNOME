@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="AcreetionOS GNOME"
+iso_name="AcreetionOS-GNOME"
 iso_label="acreetionOS_gnome_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="Acreetion OS"
 iso_application="Acreetion OS GNOME Install Media"

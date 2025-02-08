@@ -7,6 +7,8 @@ b43-fwcutter
 base
 bcachefs-tools
 bind
+bluez
+bluez-utils
 bolt
 brltty
 broadcom-wl
@@ -40,6 +42,7 @@ file-roller
 foot-terminfo
 fsarchiver
 gnome
+gnome-bluetooth-3.0
 gnome-shell-extensions
 gnome-tweaks
 gpart
@@ -60,12 +63,14 @@ less
 lftp
 libfido2
 libusb-compat
-linux
+linux613-tkt-bore-llvm
+linux613-tkt-bore-llvm-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
 linux-headers
 livecd-sounds
+lollypop
 loupe
 lsscsi
 lvm2
