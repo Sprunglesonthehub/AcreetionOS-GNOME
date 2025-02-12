@@ -1,0 +1,50 @@
+{
+  "logoType": "ascii",
+  "customAscii": "~/.config/fastfetch/acreetionos.txt",
+  "modules": [
+    {
+      "type": "title",
+      "key": "  System Info"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "type": "os"
+    },
+    {
+      "type": "kernel"
+    },
+    {
+      "type": "uptime"
+    },
+    {
+      "type": "packages"
+    },
+    {
+      "type": "shell"
+    },
+    {
+      "type": "terminal"
+    },
+    {
+      "type": "cpu"
+    },
+    {
+      "type": "gpu"
+    },
+    {
+      "type": "memory"
+    },
+    {
+      "type": "disk"
+    },
+    {
+      "type": "battery"
+    },
+    {
+      "type": "colors"
+    }
+  ]
+}
+
