@@ -39,6 +39,7 @@ f2fs-tools
 fastfetch
 fatresize
 file-roller
+firefox
 foot-terminfo
 fsarchiver
 gnome
@@ -155,7 +156,6 @@ xfsprogs
 xl2tpd
 yaml-cpp
 yay-bin
-zen-browser-bin
 zsh
 
 # VMWARE
