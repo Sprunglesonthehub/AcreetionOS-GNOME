@@ -4,7 +4,7 @@
 iso_name="AcreetionOS-GNOME"
 iso_label="acreetionOS_gnome_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="AcreetionOS"
-iso_application="Acreetion OS GNOME Install Media"
+iso_application="AcreetionOS GNOME Install Media"
 iso_version="1.0"
 install_dir="arch"
 buildmodes=('iso')

@@ -1,22 +1,22 @@
 alsa-utils
 amd-ucode
 ananicy-cpp
+arc-gtk-theme
+arc-icon-theme
 arch-install-scripts
 archinstall
 b43-fwcutter
 base
-bcachefs-tools
 bind
+blender
 bluez
 bluez-utils
 bolt
 brltty
 broadcom-wl
 btrfs-progs
-calamares
+calamares-git
 calamares-config-gnome
-chromium
-clonezilla
 cloud-init
 cryptsetup
 darkhttpd
@@ -44,6 +44,7 @@ foot-terminfo
 fsarchiver
 gnome
 gnome-bluetooth-3.0
+gnome-extra
 gnome-shell-extensions
 gnome-tweaks
 gpart
@@ -64,8 +65,8 @@ less
 lftp
 libfido2
 libusb-compat
-linux613-tkt-bore-llvm
-linux613-tkt-bore-llvm-headers
+linux
+linux-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -111,6 +112,7 @@ ppp
 pptpclient
 pv
 qemu-guest-agent
+rawtherapee
 refind
 reflector
 rp-pppoe
@@ -160,3 +162,18 @@ zsh
 
 # VMWARE
 open-vm-tools
+
+# Calamares deps
+qt5ct
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
+qca-qt6
+qt6-5compat
+qt6-base
+qt6-declarative
+qt6-doc
+qt6-shadertools
+qt6-svg
+qt6-tools
+qt6-translations
+qt6-wayland

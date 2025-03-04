@@ -10,4 +10,4 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Fastfetch
-fastfetch --logo ~/.config/fastfetch/acreetionos.txt
+fastfetch -l .fastfetch/AcreetionOS.txt
