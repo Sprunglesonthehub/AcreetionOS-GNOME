@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Calamares
-Comment=Install the System
-Exec=calamares
-Icon=calamares
-Terminal=false
-Type=Application
