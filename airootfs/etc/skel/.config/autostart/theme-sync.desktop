@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Qt Theme Sync
+Comment=Syncs GTK theme to Qt for Calamares
+Exec=/usr/local/bin/sync-qt-theme.sh
+Terminal=false
