@@ -1,1 +1,1 @@
-sudo rm -rf work/ && sudo mkarchiso -v .
+sudo rm -rf work/ && mkarchiso -v -w work -o out . -- -T tmpfs -s 16G

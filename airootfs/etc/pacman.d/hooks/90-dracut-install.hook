@@ -1,0 +1,12 @@
+# File: /etc/pacman.d/hooks/90-dracut-install.hook
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = linux
+# Add other kernels you support, e.g., Target = linux-lts
+
+[Action]
+Description = Updating dracut initramfs...
+When = PostTransaction
+Exec = /usr/bin/dracut --force --hostonly --no-hostonly-cmdline

@@ -1,0 +1,11 @@
+# File: /etc/pacman.d/hooks/60-dracut-remove.hook
+[Trigger]
+Type = Package
+Operation = Remove
+Target = linux
+# Add other kernels you support, e.g., Target = linux-lts
+
+[Action]
+Description = Removing dracut initramfs...
+When = PreTransaction
+Exec = /usr/bin/dracut --rm --force --hostonly --no-hostonly-cmdline

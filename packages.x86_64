@@ -4,14 +4,15 @@ alsa-utils
 #adw-gtk3  # <--- This is the correct package
 #intel-compute-runtime
 arch-install-scripts
-#dracut
+archlinux-keyring
+dracut
 #archiso
 b43-fwcutter
 base
 bind
 bolt
 #brltty
-broadcom-wl-dkms
+broadcom-wl
 #btrfs-progs
 #xfsprogs
 cloud-init
@@ -24,6 +25,7 @@ dmidecode
 #dmraid
 dnsmasq
 dosfstools
+dracut
 e2fsprogs
 edk2-shell
 efibootmgr
@@ -47,8 +49,8 @@ less
 #lftp
 #libfido2
 libusb-compat
-linux
-linux-headers
+linux-lts
+linux-lts-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -59,12 +61,6 @@ lvm2
 #man-pages
 mc
 mdadm
-mkinitcpio
-mkinitcpio-archiso
-mkinitcpio-nfs-utils
-mkinitcpio-busybox
-mkinitcpio-systemd-tool
-mkinitcpio-openswap
 modemmanager
 mtools
 nano
@@ -149,7 +145,7 @@ calamares-git
 #xxcalamares
 #calamares-git
 #calamares-git
-calamares-config
+calamares-config-gnome
 #gnome-disk-utility
 # fastfetch
 # cinnamon-configs
