@@ -12,7 +12,7 @@ base
 bind
 bolt
 #brltty
-broadcom-wl
+broadcom-wl-dkms
 #btrfs-progs
 #xfsprogs
 cloud-init
@@ -21,6 +21,7 @@ ddrescue
 dhclient
 dhcpcd
 diffutils
+dkms
 dmidecode
 #dmraid
 dnsmasq
@@ -200,7 +201,7 @@ firefox
 pamac-aur-git
 gnome-themes-extra
 # gtk-engine-murrine
-cinnamon-translations
+#cinnamon-translations
 adwaita-icon-theme
 xxkpmcore
 nemo
