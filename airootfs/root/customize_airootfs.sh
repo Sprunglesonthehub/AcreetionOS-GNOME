@@ -21,12 +21,3 @@ yes | pacman -Scc
 # Refresh repos
 pacman-key --init
 pacman-key --populate archlinux
-
-#!/bin/bash
-set -e
-
-echo ">>> Generating initramfs with mkinitcpio..."
-
-KERNEL="$(basename "$(find /usr/lib/modules -maxdepth 1 -type d | head -n1)")"
-
-mkinitcpio -k "$KERNEL" -g /boot/initramfs-linux.img
