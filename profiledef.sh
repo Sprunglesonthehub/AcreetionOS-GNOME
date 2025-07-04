@@ -25,34 +25,3 @@ file_permissions=(
   ["/usr/local/bin/Installation_guide"]="0:0:755"
   ["/usr/local/bin/livecd-sound"]="0:0:755"
 )
-
-# Dracut boot function
-
-### Custom build function to use dracut instead of mkinitcpio ###
-# This function is automatically called by the archiso build script.
-# It runs inside the chroot environment after packages are installed.
-# See: https://wiki.archlinux.org/title/Archiso#Customizing_the_live_system
-
-build_custom_airootfs() {
-  # Get the installed kernel version to pass to dracut
-  # This finds the directory in /usr/lib/modules/ for the installed kernel
-  local _kernel
-  _kernel="$(basename "$(find /usr/lib/modules -maxdepth 1 -type d -name '*-arch*')")"
-
-  # Log what we are doing
-  echo ">>> Running dracut to generate initramfs for kernel: ${_kernel}"
-
-  # Generate the main initramfs.
-  # We explicitly name the output file to what mkarchiso expects.
-  # The "archiso" module is a dracut module for live systems.
-  dracut --force --no-hostonly --add "archiso" \
-         "/boot/initramfs-linux.img" "${_kernel}"
-
-  # Check if the file was created. If not, fail the build.
-  if [[ ! -f "/boot/initramfs-linux.img" ]]; then
-    echo "!!! Dracut failed to create /boot/initramfs-linux.img. Aborting."
-    return 1
-  fi
-
-  echo ">>> Dracut initramfs created successfully."
-}

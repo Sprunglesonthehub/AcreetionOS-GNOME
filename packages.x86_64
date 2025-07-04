@@ -5,7 +5,7 @@ alsa-utils
 #intel-compute-runtime
 arch-install-scripts
 archlinux-keyring
-dracut
+archiso
 #archiso
 b43-fwcutter
 base
@@ -50,8 +50,8 @@ less
 #lftp
 #libfido2
 libusb-compat
-linux-lts
-linux-lts-headers
+linux
+linux-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -62,6 +62,9 @@ lvm2
 #man-pages
 mc
 mdadm
+mkinitcpio
+mkinitcpio-archiso
+mkinitcpio-nfs-utils
 modemmanager
 mtools
 nano
@@ -98,6 +101,8 @@ sof-firmware
 squashfs-tools
 sudo
 syslinux
+systemd
+systemd-sysvcompat
 #systemd-resolvconf
 tcpdump
 testdisk
