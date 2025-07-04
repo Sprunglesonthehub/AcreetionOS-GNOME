@@ -244,3 +244,6 @@ gnome-tweaks
 nautilus
 gnome-terminal
 gparted
+
+# Compatibility themes
+arc-solid-gtk-theme
