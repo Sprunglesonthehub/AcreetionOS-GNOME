@@ -1,4 +1,4 @@
-if [ "-f /usr/bin/ | grep xarchiso" != "true" ] ; then
+if [ "-f /usr/bin/ | grep archiso" != "true" ] ; then
   sudo pacman -Syy archiso --noconfirm
 fi
 
