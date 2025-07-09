@@ -28,7 +28,7 @@ Its purpose is to provide an alternative download location, potentially offering
 *   A backup should the primary source experience downtime.
 
 **What you'll find here:**
-*   Installation ISO images for AcreetionOS GNOME.
+*   Installation ISO images for AcreetionOS GNOME. (TBA)
 *   Potentially other related files necessary for the distribution.
 
 ## 🚀 Getting Started with AcreetionOS GNOME
