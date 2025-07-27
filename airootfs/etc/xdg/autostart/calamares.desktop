@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Calamares
+Comment=Install the System
+Exec=QT_QPA_PLATFORMTHEME=qt5ct QT_STYLE_OVERRIDE=arc-dark calamares
+Icon=calamares
+Terminal=false
+Type=Application

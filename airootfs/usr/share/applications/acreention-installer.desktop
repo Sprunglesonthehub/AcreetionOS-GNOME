@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Install AcreetionOS GNOME
+Comment=Install AcreetionOS GNOME to your hard drive
+Exec=pkexec env QT_STYLE_OVERRIDE=Adwaita-Dark /usr/bin/calamares
+Icon=calamares
+Terminal=false
+Type=Application
+Categories=System;
