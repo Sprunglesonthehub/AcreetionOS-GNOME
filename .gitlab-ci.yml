@@ -1,51 +1,39 @@
-# Use a suitable base image.
-# The official Arch Linux image is fine, but you may want to
-# add a custom image later for faster builds.
-image: archlinux:latest
-
-# Define the stages for the pipeline.
 stages:
   - build
+  - deploy
 
-# This is a variable that stores the URL to your archiso profile.
-# We'll use this variable in the script to clone the repository.
-variables:
-  ARCHISO_PROFILE_URL: "https://gitlab.acreetionos.org/natalie/acreetionos-gnome.git"
-  ARCHISO_PROFILE_NAME: "acreetionos-gnome"
-
-# The main job for building the ISO.
+# Use a specific tag to target the runner we just configured.
 build_iso:
   stage: build
+  tags:
+    - acreetionos-iso
   script:
     - echo "Updating system and installing dependencies..."
-    - pacman -Syu --noconfirm git archiso
+    - sudo pacman -Syu --noconfirm git archiso
     
     # Clone the archiso profile from the specified URL.
-    - echo "Cloning the archiso profile from $ARCHISO_PROFILE_URL"
-    - git clone $ARCHISO_PROFILE_URL
+    - echo "Cloning the archiso profile..."
+    - git clone https://gitlab.acreetionos.org/natalie/acreetionos-gnome.git
     
     # Move into the cloned directory to build from there.
-    - cd $ARCHISO_PROFILE_NAME
+    - cd acreetionos-gnome
     
-    # Build the ISO using mkarchiso.
-    # The output will be placed in the 'out' directory.
+    # Build the ISO using mkarchiso with sudo.
     - echo "Building AcreetionOS ISO..."
     - sudo mkarchiso -v -o ../output .
 
-  # This is a crucial section to save your ISO file.
-  # The ISO will be available for download from the GitLab UI.
   artifacts:
     paths:
       - output/*.iso
     name: "acreetionos-gnome-iso-$CI_COMMIT_SHORT_SHA"
     expire_in: 1 week
 
-# This job adds a manual step for deployment.
 deploy_iso:
   stage: deploy
+  when: manual
+  tags:
+    - acreetionos-iso
   script:
     - echo "Deployment of AcreetionOS ISO complete."
-    # Your deployment commands would go here (e.g., uploading to a server).
-  when: manual
   dependencies:
     - build_iso
