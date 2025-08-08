@@ -5,7 +5,7 @@ stages:
 build_iso:
   stage: build
   tags:
-    - acreetionos-gnome # This tag ensures the job runs on your specific runner.
+    - acreetionos-gnome
   script:
     - echo "Updating system and installing dependencies..."
     - sudo pacman -Syu --noconfirm git archiso
@@ -17,14 +17,14 @@ build_iso:
   artifacts:
     paths:
       - output/*.iso
-    name: "acreetionos-gnome-iso-$CI_COMMIT_SHORT_SHA"
+    name: "acreetos-gnome-iso-$CI_COMMIT_SHORT_SHA"
     expire_in: 1 week
 
 deploy_iso:
   stage: deploy
   when: manual
   tags:
-    - acreetionos-gnome # The deploy job also needs to run on this specific runner.
+    - acreetionos-gnome
   script:
     - echo "Deployment of AcreetionOS ISO complete."
     # Your deployment commands would go here.
