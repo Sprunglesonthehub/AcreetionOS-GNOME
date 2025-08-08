@@ -1,25 +1,40 @@
+# Use a suitable Arch Linux Docker image.
+# This will create a fresh, isolated environment for your build job.
+image: archlinux:latest
+
 stages:
   - build
   - deploy
 
+# This job will build the AcreetionOS ISO inside a Docker container.
 build_iso:
   stage: build
   tags:
     - acreetionos-gnome
   script:
     - echo "Updating system and installing dependencies..."
-    - sudo pacman -Syu --noconfirm git archiso
+    # No sudo needed here, as the job runs as root inside the Docker container.
+    - pacman -Syu --noconfirm git archiso
+    
+    # Clone the archiso profile from the specified URL.
     - echo "Cloning the archiso profile..."
     - git clone https://gitlab.acreetionos.org/natalie/acreetionos-gnome.git
+    
+    # Move into the cloned directory to build from there.
     - cd acreetionos-gnome
+    
+    # Build the ISO using mkarchiso.
     - echo "Building AcreetionOS ISO..."
-    - sudo mkarchiso -v -o ../output .
+    - mkarchiso -v -o ../output .
+
+  # Save the generated ISO as a downloadable artifact.
   artifacts:
     paths:
       - output/*.iso
     name: "acreetos-gnome-iso-$CI_COMMIT_SHORT_SHA"
     expire_in: 1 week
 
+# This job is a manual step for deployment.
 deploy_iso:
   stage: deploy
   when: manual
@@ -27,5 +42,6 @@ deploy_iso:
     - acreetionos-gnome
   script:
     - echo "Deployment of AcreetionOS ISO complete."
+    # Your deployment commands would go here (e.g., uploading to a server, etc.).
   dependencies:
     - build_iso
