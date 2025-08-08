@@ -27,6 +27,5 @@ deploy_iso:
     - acreetionos-gnome
   script:
     - echo "Deployment of AcreetionOS ISO complete."
-    # Your deployment commands would go here.
   dependencies:
     - build_iso
